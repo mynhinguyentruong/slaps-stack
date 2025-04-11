@@ -1,30 +1,84 @@
-# Laravel + Livewire Starter Kit
+# 🔥 Slaps Stack
 
-## Introduction
+A modern, feature-rich Laravel development stack that slaps.
 
-Our Laravel + [Livewire](https://livewire.laravel.com) starter kit provides a robust, modern starting point for building Laravel applications with a Livewire frontend.
+## What is Slaps Stack?
 
-Livewire is a powerful way of building dynamic, reactive, frontend UIs using just PHP. It's a great fit for teams that primarily use Blade templates and are looking for a simpler alternative to JavaScript-driven SPA frameworks like React and Vue.
+Slaps Stack is a carefully curated collection of Laravel tools and components designed to supercharge your development workflow. It combines powerful debugging, monitoring, frontend interactivity, and high-performance serving into one cohesive package.
+
+## Components
+
+### 🐞 Laravel Debugbar
+Advanced debugging and profiling tool that provides real-time insights into your application's performance. 
+
+- Query monitoring
+- Request/response inspection  
+- Memory usage tracking
+- Exception handling
+- Timeline visualization
+- Route debugging
+
+### 🔭 Laravel Telescope
+An elegant debug assistant for your Laravel applications, offering beautiful UI for monitoring:
+
+- Requests
+- Commands
+- Scheduled tasks
+- Cache operations  
+- Database queries
+- Events
+- Mail
+- Notifications
+- Queue jobs
+- Redis commands
+
+### ⚡ Laravel + Livewire Starter Kit
+Full-stack framework for Laravel that lets you build dynamic interfaces without leaving the comfort of PHP:
+
+- Real-time validation
+- Browser history management
+- Loading states
+- Form submissions
+- Pagination
+- File uploads
+- Authentication
 
 This Livewire starter kit utilizes Livewire 3, Laravel Volt (optionally), TypeScript, Tailwind, and the [Flux UI](https://fluxui.dev) component library.
 
-If you are looking for the alternate configurations of this starter kit, they can be found in the following branches:
+### 🚀 FrankenPHP
+High-performance application server with built-in PHP runtime:
 
-- [components](https://github.com/laravel/livewire-starter-kit/tree/components) - if Volt is not selected
-- [workos](https://github.com/laravel/livewire-starter-kit/tree/workos) - if WorkOS is selected for authentication
+- HTTP/3 support
+- Early hints
+- Worker mode
+- Static file serving  
+- Docker integration
+- Auto HTTPS
+- Real-time capabilities
 
-## Official Documentation
+## Getting Started
 
-Documentation for all Laravel starter kits can be found on the [Laravel website](https://laravel.com/docs/starter-kits).
+```bash
+git clone 
+composer install && npm install
+composer run dev
+```
 
-## Contributing
+## Requirements
 
-Thank you for considering contributing to our starter kit! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- PHP 8.1+
+- Composer 2+
+- Node.js 16+ (for asset compilation)
 
-## Code of Conduct
+## Documentation
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+For detailed documentation on each component:
+
+- [Laravel Debugbar](https://github.com/barryvdh/laravel-debugbar)
+- [Laravel Telescope](https://laravel.com/docs/telescope)
+- [Laravel Livewire](https://laravel-livewire.com)
+- [FrankenPHP](https://frankenphp.dev)
 
 ## License
 
-The Laravel + Livewire starter kit is open-sourced software licensed under the MIT license.
+The Slaps Stack is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
