@@ -1,0 +1,40 @@
+services:
+    laravel-slaps:
+        build:
+            context: .
+        image: laravel-slaps:v1.0.0  # Tag your images
+        restart: unless-stopped
+        ports:
+            - "80:80" # HTTP
+            - "443:443" # HTTPS
+            - "443:443/udp" # HTTP/3
+        volumes:
+            - caddy_data:/data
+            - caddy_config:/config
+        env_file:
+#            - .env.production
+            - .env
+        networks:
+            - laravel
+        healthcheck:
+            test: ["CMD", "curl", "-f", "http://localhost/health"]
+            interval: 30s
+            timeout: 10s
+            retries: 3
+            start_period: 40s
+        deploy:
+            resources:
+                limits:
+                    cpus: '1'
+                    memory: 1G
+
+
+networks:
+    laravel:
+        driver: bridge
+
+volumes:
+    caddy_data:
+        driver: local
+    caddy_config:
+        driver: local
