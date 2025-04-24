@@ -4,7 +4,7 @@ FROM dunglas/frankenphp:1.1-alpine AS builder
 # Set working directory
 WORKDIR /app
 
-# Copy dependency files first (for better layer caching)
+# Copy laravel project to working directory
 COPY . .
 
 # Install PHP extensions
@@ -76,11 +76,10 @@ RUN chmod -R 775 /app/storage /app/bootstrap/cache && \
  chown -R www-data:www-data /app
 
 # Server configuration
+# Be sure to replace "your-domain-name.example.com" by your domain name
+#ENV SERVER_NAME=your-domain-name.example.com
+# If you want to disable HTTPS, use this value instead:
 ENV SERVER_NAME=:80
-# Uncomment if needed: ENV SERVER_NAME=your-domain.com
 
 # Expose port
 EXPOSE 80
-
-# Set the default command
-CMD ["frankenphp", "run", "--config", "/etc/caddy/Caddyfile"]

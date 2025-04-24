@@ -16,18 +16,11 @@ services:
             - .env
         networks:
             - laravel
-        healthcheck:
-            test: ["CMD", "curl", "-f", "http://localhost/health"]
-            interval: 30s
-            timeout: 10s
-            retries: 3
-            start_period: 40s
         deploy:
             resources:
                 limits:
                     cpus: '1'
                     memory: 1G
-
 
 networks:
     laravel:
