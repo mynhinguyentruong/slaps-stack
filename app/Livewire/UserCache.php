@@ -22,7 +22,7 @@ class UserCache extends Component
 
         $this->authorize('view-any', $this->user);
 
-        Log::error('User model retrieved successfully!',$this->user->toArray());
+        Log::info('User model retrieved successfully!',$this->user->toArray());
     }
     public function render()
     {

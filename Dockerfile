@@ -49,6 +49,7 @@ RUN install-php-extensions \
  gd \
  intl \
  zip \
+ pcntl \
  opcache
 
 # Enable PHP production settings
@@ -83,3 +84,5 @@ ENV SERVER_NAME=:80
 
 # Expose port
 EXPOSE 80
+
+ENTRYPOINT ["php", "artisan", "octane:frankenphp", "--host=localhost", "--port=8000", "--log-level=info"]
