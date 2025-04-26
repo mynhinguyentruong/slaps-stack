@@ -12,6 +12,6 @@ class UserPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->id === 1;
+        return $user->id === 2;
     }
 }

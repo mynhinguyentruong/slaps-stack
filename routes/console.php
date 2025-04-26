@@ -21,5 +21,5 @@ Artisan::command('clear:all', function () {
 
 Schedule::call(function () {
     $user = User::find(1);
-    Log::critical($user->name);
+    Log::info($user->name);
 })->everyFiveSeconds();
